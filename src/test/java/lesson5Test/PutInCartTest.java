@@ -9,6 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class PutInCartTest extends AbstractTest{
+    static Logger logger = LoggerFactory.getLogger(PutInCartTest.class);
     //Добавление товара в корзину
     //Шаги:
     //1. В строку поиска набрать: маалокс, нажать enter
@@ -16,6 +17,7 @@ public class PutInCartTest extends AbstractTest{
    // static Logger logger = LoggerFactory.getLogger(AppTest.class);
     @Test
     void PutInCartTest() {
+        logger.error("ошибка");
        // logger.error("ошибка");
       //  getDriver().get("https://budzdorov.ru");
       //  WebElement webElement01 = getDriver().findElement(By.xpath(".//button[@class='popup-metadata-type-slider-icon-btn']"));

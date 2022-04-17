@@ -11,6 +11,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class DeleteFromCartTest extends AbstractTest{
+    static Logger logger = LoggerFactory.getLogger(DeleteFromCartTest.class);
 
 //Удаление товара из корзины
     //Шаги:
@@ -20,6 +21,7 @@ public class DeleteFromCartTest extends AbstractTest{
 
     @Test
     void DeleteFromCart (){
+        logger.error("ошибка");
        WebElement webElement1 = getDriver().findElement(By.xpath(".//input[@class='input input_primary header__search-input']"));
        webElement1.sendKeys("маалокс");
         WebElement webElement2 = getDriver().findElement(By.xpath(".//div[@class='header__search-input-icon']"));

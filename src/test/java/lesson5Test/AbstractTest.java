@@ -17,12 +17,12 @@ import org.slf4j.LoggerFactory;
 import java.util.concurrent.TimeUnit;
 
 public abstract class AbstractTest {
-    static Logger logger = LoggerFactory.getLogger(AppTest.class);
+
     private static WebDriver driver;
 
     @BeforeAll
     static void init(){
-        logger.error("ошибка");
+
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--incognito");

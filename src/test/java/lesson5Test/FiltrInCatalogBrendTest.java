@@ -5,10 +5,14 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class FiltrInCatalogBrendTest extends AbstractTest {
+    static Logger logger = LoggerFactory.getLogger(FiltrInCatalogBrendTest.class);
     @Test
     void FiltrsInCatalogBrend() {
+        logger.error("ошибка");
         WebElement webElement1 = getDriver().findElement(By.xpath(".//span[@class='header-catalog-button__title']"));
         webElement1.click();
         WebElement webElement2 = getDriver().findElement(By.xpath(".//a[@href='/category/2037']"));

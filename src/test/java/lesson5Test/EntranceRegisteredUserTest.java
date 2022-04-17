@@ -11,6 +11,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class EntranceRegisteredUserTest extends AbstractTest{
+    static Logger logger = LoggerFactory.getLogger(EntranceRegisteredUserTest.class);
     //Вход зарегистрированного пользователя
     //Шаги
 //1. Нажать значок "Вход/регистрация"
@@ -18,6 +19,7 @@ public class EntranceRegisteredUserTest extends AbstractTest{
 
     @Test
     void EntranceRegisteredUser()  {
+        logger.error("ошибка");
         getDriver().navigate().to("https://budzdorov.ru/customer/account/login");
         Actions registration = new Actions(getDriver());
         registration.sendKeys(getDriver().findElement(By.name("userLogin")),"22fortest22@mail.ru")
