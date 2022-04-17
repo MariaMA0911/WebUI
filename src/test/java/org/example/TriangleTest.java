@@ -6,11 +6,18 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class TriangleTest {
+
+    static Logger logger = LoggerFactory.getLogger(AppTest.class);
 
     @ParameterizedTest
     @CsvSource({ "2, 2, 2, 1.7320508075688772","5, 6, 7, 14.696938456699069"})
     void testValidMean(int a, int b, int c, double area) throws TriangleException {
+        logger.info("Инфо");
+        logger.error("ошибка");
         Triangle triangle = new Triangle();
         Assertions.assertEquals(area,Triangle.TriangleArea(a, b, c));
     }

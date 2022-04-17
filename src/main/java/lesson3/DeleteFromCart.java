@@ -23,9 +23,11 @@ public class DeleteFromCart {
        options.addArguments("start-maximized");
       options.addArguments("--incognito");
        options.addArguments("disable-popup-blocking");
-        WebDriver driver = new ChromeDriver(options);
-       driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+       WebDriver driver = new ChromeDriver(options);
+       driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         driver.get("https://budzdorov.ru");
+        WebElement webElement01 = driver.findElement(By.xpath(".//button[@class='popup-metadata-type-slider-icon-btn']"));
+        webElement01.click();
 
         WebElement webElement1 = driver.findElement(By.xpath(".//input[@class='input input_primary header__search-input']"));
         webElement1.sendKeys("маалокс");

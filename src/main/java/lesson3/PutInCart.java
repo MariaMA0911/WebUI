@@ -32,7 +32,8 @@ public class PutInCart {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         //переходим на нужную страницу
         driver.get("https://budzdorov.ru");
-
+        WebElement webElement01 = driver.findElement(By.xpath(".//button[@class='popup-metadata-type-slider-icon-btn']"));
+        webElement01.click();
        WebElement webElement1 = driver.findElement(By.xpath(".//input[@class='input input_primary header__search-input']"));
       webElement1.sendKeys("маалокс");
         WebElement webElement2 = driver.findElement(By.xpath(".//div[@class='header__search-input-icon']"));
