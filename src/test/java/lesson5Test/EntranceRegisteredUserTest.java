@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -18,14 +19,13 @@ public class EntranceRegisteredUserTest extends AbstractTest{
     @Test
     void EntranceRegisteredUser()  {
         getDriver().navigate().to("https://budzdorov.ru/customer/account/login");
-        WebElement webElement2 =  getDriver().findElement(By.name("userLogin"));
-        webElement2.sendKeys("22fortest22@mail.ru");
+        Actions registration = new Actions(getDriver());
+        registration.sendKeys(getDriver().findElement(By.name("userLogin")),"22fortest22@mail.ru")
+                .sendKeys(getDriver().findElement(By.name("userPassword")),"123456789Ab")
+                .click(getDriver().findElement(By.xpath(".//button[@type='submit']")))
+                .build()
+                .perform();
 
-        WebElement webElement3 =  getDriver().findElement(By.name("userPassword"));
-        webElement3.sendKeys("123456789Ab");
-
-        WebElement webElement4 =  getDriver().findElement(By.xpath(".//button[@type='submit']"));
-        webElement4.click();
         Assertions.assertTrue(getDriver().getCurrentUrl().contains("https://budzdorov.ru/customer/account"));
 
 
