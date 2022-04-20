@@ -39,8 +39,8 @@ public abstract class AbstractTest {
         Assertions.assertDoesNotThrow( ()-> driver.navigate().to("https://budzdorov.ru"),
                 "Страница не доступна");
         getDriver().manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-        WebElement webElement01 = getDriver().findElement(By.xpath(".//button[@class='popup-metadata-type-slider-icon-btn']"));
-        webElement01.click();
+        //WebElement webElement01 = getDriver().findElement(By.xpath(".//button[@class='popup-metadata-type-slider-icon-btn']"));
+       // webElement01.click();
     }
 
     @AfterAll
