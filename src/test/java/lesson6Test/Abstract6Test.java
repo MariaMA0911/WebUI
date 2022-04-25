@@ -36,8 +36,8 @@ public class Abstract6Test {
         Assertions.assertDoesNotThrow( ()-> getWebDriver().navigate().to("https://budzdorov.ru"),
                 "Страница не доступна");
         Assertions.assertTrue(true);
-        WebElement webElement2 = getWebDriver().findElement(By.xpath(".//button[@class='popup-metadata-type-slider-icon-btn']"));
-        webElement2.click();
+       // WebElement webElement2 = getWebDriver().findElement(By.xpath(".//button[@class='popup-metadata-type-slider-icon-btn']"));
+       // webElement2.click();
 
     }
 
