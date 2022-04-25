@@ -28,8 +28,7 @@ public class DeleteFromCartTest extends AbstractTest{
         webElement2.click();
         WebElement webElement3 = getDriver().findElement(By.xpath("(.//button[@class='button button_primary product__cart-btn'])[1]"));
         webElement3.click();
-        //WebElement webElement30 = getDriver().findElement(By.xpath("(.//button[@class='button button_primary product__cart-btn'])[2]"));
-      // webElement30.click();
+
         WebElement webElement4 = getDriver().findElement(By.xpath(".//a[@href='/checkout/cart/'][1]"));
         webElement4.click();
         WebElement webElement5 = getDriver().findElement(By.xpath("(.//button[@class='button mini-basket__remove-item-btn'])"));
@@ -37,4 +36,5 @@ public class DeleteFromCartTest extends AbstractTest{
         Assertions.assertNotNull(getDriver().findElement(By.xpath(".//p[@class ='mini-basket__empty-cart']")), "в корзине остался товар");
 
     }
+
 }
