@@ -1,14 +1,20 @@
 package lesson6Test;
 
+import io.qameta.allure.*;
 import lesson6.MainPage;
 import lesson6.VitaminsPage;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 
+@Story("Тестирование каталога")
 public class Catalog6Test extends Abstract6Test{
 
     @Test
+    @Description("Выбрать фильтр по бренду")
+    @Severity(SeverityLevel.NORMAL)
+    @Link("https://budzdorov.ru")
+    @TmsLink("https://github.com/MariaMA0911/WebUI/tree/master/src/test/java/lesson6Test")
     void filtrBrand(){
         MainPage mainPage = new MainPage(getWebDriver());
         mainPage.goToCatalog();
